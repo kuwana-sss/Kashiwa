@@ -1,0 +1,379 @@
+/*共通基本ルール
+余白：4倍数
+PCコンテンツ幅：1200px
+font: Zen Kaku Gothic New
+font-size: ベースSP12px　PC20px
+                 4の倍数
+見出しfont-size: SP→24,12px,PC→48.24px
+SP幅:375px 
+PC幅:1366px
+
+007AB7　青
+6CBAD8 の透明度20％　水色
+
+000000　黒
+FFFFFF　白
+007AB7　の透明度90％　濃いめの水色
+
+EDA184　の透明度20％　ピンク
+
+64C99B　の透明度20％　パステルグリーン
+
+F4F4F4　白
+000000　の透明度25％　薄いグレー
+8F8F8F　グレー
+
+*/
+
+/* h1>見出し(Gallery,Event,Travel)　h2>"Formosa"　h3>イベント名　h4>"開催期間" h5>"ファルモサ（麗しの島）" h6>開催日時 */
+
+.onlyPC {
+    display: none;
+}
+
+body{
+    width: 375px;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.headerContainer { /* TOP画像 */
+    position: relative;
+    width: 375px;
+    height:  667px;
+    background-image: url(../images/hero.png);
+    background-size: cover;
+}
+
+.mainLogo { /* Taiwanロゴ */
+    position: absolute;
+    top: 30%;
+    left: 0;
+    width: 100%; /* 親要素にフィットするように設定 */
+    height: auto;
+}
+
+h1,h2,h3,h4,h5 {
+    text-align: center;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 24px;
+    padding: 8px;
+}
+
+.sub { /* 見出しの小文字部分 */
+    font-size: 12px;
+}
+
+.h1background { /* 見出しの背景画像 */
+    width: 220px;
+    height: 40px;
+    background-image: url(../images/hbackimage.png);
+    background-size: contain;
+    margin: 0 auto 60px;
+}
+
+.gallerySec { /* 見出し上の余白 */
+    padding-top: 28px;
+}
+.travelSec { /* 見出し上の余白 */
+    padding-top: 28px;
+}
+.eventSec { /* 見出し上の余白 */
+    padding-top: 28px;
+}
+
+h2 { /* "Formosa" */
+    font-size: 20px;
+    margin: 0 auto 20px;
+}
+
+h3 { /* イベント名 */
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+h4 { /* "開催期間" */
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+h5 { /* "ファルモサ（麗しの島）" */
+    position: relative;
+    font-size: 12px;
+}
+
+h5::after { /* 下線 */
+    content: "";
+    display: block;
+    width: 132px;
+    height: 1px;
+    background-color: #000000;
+    position: absolute;
+    bottom: -12px;
+    left: 121px;
+}
+
+h6 { /* 開催日時 */
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.mainText { /* 紹介文（複数個所） */
+    position: relative;
+    width: 223px;
+    margin: 0 auto 52px;
+    padding-top: 0px;
+    font-size: 12px;
+}
+.mainText::before { /* 上線 */
+    content: "";
+    display: block;
+    width: 223px;
+    height: 1px;
+    background-color: #000000;
+    position: absolute;
+    top: -12px;
+    left: 0px;
+}
+.mainText::after { /* 下線 */
+    content: "";
+    display: block;
+    width: 223px;
+    height: 1px;
+    background-color: #000000;
+    position: absolute;
+    bottom: -12px;
+    left: 0px;
+}
+
+.upper { /* 紹介上段 */
+    width: 375px;
+    height: 407px;
+    background-image: url(../images/backimage1.png);
+    background-size: cover;
+}
+
+.lower { /* 紹介下段 */
+    padding-top: 32px;
+    width: 375px;
+    height: 399px;
+    background-image: url(../images/backimage2.png);
+    background-size: cover;
+}
+
+.topImg { /* 紹介画像 */
+    display: block;
+    width: 335px;
+    height: 139px;
+    margin: 60px auto;
+}
+
+.flag { /* 国旗 */
+    display: block;
+    padding-top: 20px;
+    margin: 0 auto 40px;
+}
+
+.map {
+    position: relative;
+    width: 180px;
+    height: 355px;
+    background-image: url(../images/map.png);
+    background-size: cover;
+    background-position: right;
+    margin: 72px auto 112px;
+}
+.map img { /* リンク画像のサイズ*/
+    width: 59px;
+    height: 126px;
+}
+.taipei {
+    position: absolute;
+    top: 55px;
+    left: 159px;
+}
+.taichu {
+    position: absolute;
+    top: 82px;
+    right: 158px;
+}
+.tainan {
+    position: absolute;
+    top: 281px;
+    left: 15px;
+}
+
+.under { /* マップ下の区切り線 */
+    padding-bottom: 60px;
+}
+.under::after { /* マップ下の区切り線 */
+    content: "";
+    display: block;
+    width: 223px;
+    height: 1px;
+    background-color: #000000;
+    position: absolute;
+    left: 76px;
+}
+
+.eventSec img { /* イベント画像 */
+    display: block;
+    width: 335px;
+    height: 194px;
+    margin: 0 auto 20px;
+}
+
+.infoBoder { /* 基本情報 */
+    width: 335px;
+    border: 1px solid #8F8F8F;
+    padding: 20px 20px 40px;
+    margin: 0 20px 60px;
+}
+.infoSec ul li { /* 基本情報内のリスト */
+    list-style-type: none;
+    color: #000000;
+    font-size: 12px;
+}
+.infoUpper {
+    margin: 0 0 40px 0;
+}
+
+/* スライドショー */
+body,ul {
+margin: 0;
+padding: 0;
+}
+li {
+list-style: none;
+}
+/* ↓ スライドの外枠 */
+.slideWrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden; /* はみ出したスライドを隠す */
+    margin-bottom: 50px;
+}
+.indicatorWrapper { /* インジケータ―の親要素 */
+    position: relative;
+}
+/*  ↓ スライド（コンテンツ） */
+.slide { /*スライド全体 */
+width: 500%;
+height: 467px;
+display: flex;
+transition: all 0.3s;
+}
+.slide div { /* スライド */
+width: 100%; /* 335px */
+height: 100%;
+font-size: 16px;
+display: flex;
+text-align: center;
+justify-content: center;
+align-items: center;
+}
+.slide1 { /* スライドの移動量 */
+transform: translateX(0);
+}
+.slide2 { /* スライドの移動量 */
+transform: translateX(-20%);
+}
+.slide3 { /* スライドの移動量 */
+transform: translateX(-40%);
+}
+.slide4 { /* スライドの移動量 */
+    transform: translateX(-60%);
+}
+.slide5 { /* スライドの移動量 */
+    transform: translateX(-80%);
+}
+
+
+/* ↓ 左右のボタン（onlyPC）*/
+.next { /* "＞"ボタン（onlyPC）*/
+position: absolute;
+width: 15px;
+height: 15px;
+right: 10px;
+bottom: 50%;
+z-index: 10;
+cursor: pointer;
+border-top: solid 3px #000;
+border-right: solid 3px #000;
+-webkit-transform: rotate(45deg) translateY(50%);
+transform: rotate(45deg) translateY(50%);
+}
+.prev { /* "＜"ボタン（onlyPC）*/
+position: absolute;
+width: 15px;
+height: 15px;
+left: 25px;
+bottom: 50%;
+z-index: 10;
+cursor: pointer;
+border-top: solid 3px #000;
+border-right: solid 3px #000;
+-webkit-transform: rotate(-135deg) translateY(-50%);
+transform: rotate(-135deg) translateY(-50%);
+}
+
+/* ↓ インジケーター */
+.indicator {
+width: 100%;
+position: absolute;
+bottom: 20px;
+display: flex;
+column-gap: 18px;
+z-index: 10;
+justify-content: center;
+align-items: center;
+}
+.indicator li {
+width: 18px;
+height: 18px;
+border-radius: 50%;
+list-style: none;
+background-color: #8f8f8f;
+cursor: pointer;
+margin: 0 15px;
+}
+.indicator li:first-of-type {
+background-color: #000;
+}
+
+
+@media screen and (min-width:768px) {
+    .onlyPC {
+        display: block;
+    }
+    .onlySP {
+        display: none;
+    }
+    body {
+        width: 1366px;
+    }
+
+    .headerContainer { /* TOP画像 */
+        position: relative;
+        width: 1366px;
+        height:  768px;
+        background-image: url(../images/PChero.png);
+        background-size: cover;
+    }
+    .mainLogo { /* Taiwanロゴ */
+        position: absolute;
+        top: 10%;
+        left: 0;
+        width: 500px;
+        height: 314px;
+    }
+
+
+}
