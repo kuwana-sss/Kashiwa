@@ -38,19 +38,38 @@ body{
     font-style: normal;
 }
 
-.headerContainer { /* TOP画像 */
+
+/*header部分のCSS*/
+.globalNav{
+    display:none;/*ドロワーメニューのため、普段は非表示*/
+}
+header{
+    max-width: 768px;
+    height: 667px;
+    width: 100%;
+    background: url(../images/hero.png) no-repeat right center/cover;
     position: relative;
-    width: 375px;
-    height:  667px;
-    background-image: url(../images/hero.png);
-    background-size: cover;
+    padding-top: 4px;
 }
 
-.mainLogo { /* Taiwanロゴ */
+header h1{
+    position:absolute;
+    top: 116px;
+    left:68px;
+}
+header .snsIcons{
+    position:absolute;
+    bottom:70px;
+}
+header .snsIcons nav ul li{
+    margin-bottom:20px;
+}
+
+.mainLogo { 
     position: absolute;
-    top: 30%;
-    left: 0;
-    width: 100%; /* 親要素にフィットするように設定 */
+    top: 200px;
+    left: 20px;
+    width: 100%; 
     height: auto;
 }
 
@@ -157,6 +176,7 @@ h6 { /* 開催日時 */
     height: 407px;
     background-image: url(../images/backimage1.png);
     background-size: cover;
+    padding-top: 20px;
 }
 
 .lower { /* 紹介下段 */
@@ -167,16 +187,15 @@ h6 { /* 開催日時 */
     background-size: cover;
 }
 
-.topImg { /* 紹介画像 */
+.topImg img { /* 紹介画像 */
     display: block;
     width: 335px;
     height: 139px;
     margin: 60px auto;
 }
 
-.flag { /* 国旗 */
+.topFlag img { /* 国旗 */
     display: block;
-    padding-top: 20px;
     margin: 0 auto 40px;
 }
 
@@ -246,12 +265,14 @@ h6 { /* 開催日時 */
 
 /* スライドショー */
 body,ul {
-margin: 0;
-padding: 0;
+    margin: 0;
+    padding: 0;
 }
+
 li {
-list-style: none;
+    list-style: none;
 }
+
 /* ↓ スライドの外枠 */
 .slideWrapper {
     width: 100%;
@@ -265,28 +286,28 @@ list-style: none;
 }
 /*  ↓ スライド（コンテンツ） */
 .slide { /*スライド全体 */
-width: 500%;
-height: 467px;
-display: flex;
-transition: all 0.3s;
+    width: 500%;
+    height: 467px;
+    display: flex;
+    transition: all 0.3s;
 }
 .slide div { /* スライド */
-width: 100%; /* 335px */
-height: 100%;
-font-size: 16px;
-display: flex;
-text-align: center;
-justify-content: center;
-align-items: center;
+    width: 100%; /* 335px */
+    height: 100%;
+    font-size: 16px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 .slide1 { /* スライドの移動量 */
-transform: translateX(0);
+    transform: translateX(0);
 }
 .slide2 { /* スライドの移動量 */
-transform: translateX(-20%);
+    transform: translateX(-20%);
 }
 .slide3 { /* スライドの移動量 */
-transform: translateX(-40%);
+    transform: translateX(-40%);
 }
 .slide4 { /* スライドの移動量 */
     transform: translateX(-60%);
@@ -298,56 +319,131 @@ transform: translateX(-40%);
 
 /* ↓ 左右のボタン（onlyPC）*/
 .next { /* "＞"ボタン（onlyPC）*/
-position: absolute;
-width: 15px;
-height: 15px;
-right: 10px;
-bottom: 50%;
-z-index: 10;
-cursor: pointer;
-border-top: solid 3px #000;
-border-right: solid 3px #000;
--webkit-transform: rotate(45deg) translateY(50%);
-transform: rotate(45deg) translateY(50%);
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    right: 10px;
+    bottom: 50%;
+    z-index: 10;
+    cursor: pointer;
+    border-top: solid 3px #FFFFFF;
+    border-right: solid 3px #FFFFFF;
+    -webkit-transform: rotate(45deg) translateY(50%);
+    transform: rotate(45deg) translateY(50%);
+    background-color: #8F8F8F;
 }
 .prev { /* "＜"ボタン（onlyPC）*/
-position: absolute;
-width: 15px;
-height: 15px;
-left: 25px;
-bottom: 50%;
-z-index: 10;
-cursor: pointer;
-border-top: solid 3px #000;
-border-right: solid 3px #000;
--webkit-transform: rotate(-135deg) translateY(-50%);
-transform: rotate(-135deg) translateY(-50%);
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    left: 25px;
+    bottom: 50%;
+    z-index: 10;
+    cursor: pointer;
+    border-top: solid 3px #FFFFFF;
+    border-right: solid 3px #FFFFFF;
+    -webkit-transform: rotate(-135deg) translateY(-50%);
+    transform: rotate(-135deg) translateY(-50%);
+    background-color: #8F8F8F;
 }
 
 /* ↓ インジケーター */
 .indicator {
-width: 100%;
-position: absolute;
-bottom: 20px;
-display: flex;
-column-gap: 18px;
-z-index: 10;
-justify-content: center;
-align-items: center;
+    width: 100%;
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    column-gap: 18px;
+    z-index: 10;
+    justify-content: center;
+    align-items: center;
 }
 .indicator li {
-width: 18px;
-height: 18px;
-border-radius: 50%;
-list-style: none;
-background-color: #8f8f8f;
-cursor: pointer;
-margin: 0 15px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    list-style: none;
+    background-color: #8f8f8f;
+    cursor: pointer;
+    margin: 0 15px;
 }
 .indicator li:first-of-type {
-background-color: #000;
+    background-color: #000;
 }
 
+/*footer部分のCSS*/
+footer{
+    max-width: 768px;
+    background-color: #007AB7;
+    color:#FFFFFF;
+    text-align: center;
+}
+footer ul li{
+    list-style: none;
+}
+footer ul li a{
+    text-decoration: none;
+    color:#FFFFFF;
+}
+
+.footerContainer{
+    border-left: 1px solid #FF0000;
+    border-right: 1px solid #FF0000;
+    margin:0 20px;
+}
+
+.flag {
+    margin:0 auto;
+    padding-top:20px;
+    padding-bottom:20px;
+}
+.flag img{
+    width: 34px;
+    height: 24px;
+}
+
+.footerNav{
+    width: 195px;
+    margin: 0 auto;
+    font-size: 12px;
+    text-align: left;
+}
+.footerNav ul{
+    padding-left: 0;
+}
+.footerNav nav ul li{
+    width:100%;
+    border-bottom: 1px solid #ffffff;
+    padding-bottom:6px;
+    margin-top:12px;
+}
+
+.footerUnder{
+    display:flex;
+}
+.footerLogo{
+    width: 71px;
+    height: 28px;
+    background: url(../images/spFooterLogo.png) no-repeat right center/cover;
+    margin-right:24px;
+}
+.snsNav ul{
+    display:flex;
+    justify-content: space-between;
+    width:143px;
+    padding:0;
+    margin:0;
+}
+.snsNav ul li img{
+    display:block;
+    width: 32px;
+    height: 32px;
+
+}
+.footerContainer > p{
+    margin-top:24px;
+    margin-bottom: 12px;
+}
 
 @media screen and (min-width:768px) {
     .onlyPC {
@@ -360,20 +456,85 @@ background-color: #000;
         width: 1366px;
     }
 
-    .headerContainer { /* TOP画像 */
+    header{
+        width: 100%;
+        height: 100vh;
+        background: url(../images/pcHero.png) no-repeat right center/cover;
         position: relative;
-        width: 1366px;
-        height:  768px;
-        background-image: url(../images/PChero.png);
-        background-size: cover;
+        padding-top: 4px;
     }
+    /* .hero {
+        background-image: url(../images/PChero.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 100vh;
+    } */
+
     .mainLogo { /* Taiwanロゴ */
         position: absolute;
-        top: 10%;
-        left: 0;
-        width: 500px;
+    }
+    .mainLogo img {
+        width: 780px;
         height: 314px;
+        top: 50%;
+        margin-left: 140px;
+    }
+    .headerContainer {
+        width: 100%;
+        border: 1px solid #FF0000;
+        border-bottom: none;
+        margin:0 83px;
     }
 
-
+    .upper {
+        display: flex;
+        width: 100%;
+        height: 458px;
+        background-image: url(../images/pcBackimage1.png);
+        padding: 0;
+    }
+    .upperContainer {
+        display: flex;
+        padding-top: 80px;
+        width: 100%;
+        border-left: 1px solid #FF0000;
+        border-right: 1px solid #FF0000;
+        margin:0 83px;
+    }
+    .lower {
+        display: flex;
+        width: 100%;
+        height: 458px;
+        background-image: url(../images/pcBackimage2.png);
+        padding-top: 80px;
+    }
+    .topFlag img{
+        display: block;
+        width: 104px;
+        height: 78px;
+        margin: 0 200px 100px;
+    }
+    .text {
+        display: block;
+    }
+    .topImg img{ /* 紹介画像 */
+        width: 636px;
+        height: 298px;
+        margin: 0 20px 0 0;
+    }
+    h2 { /* Formosa */
+        font-size: 48px;
+        text-align: left;
+        margin: 0 0 20px 20px;
+    }
+    h5 { /* ファルモサ（麗しの島） */
+        font-size: 32px;
+        text-align: left;
+        margin: 0 0 100px 20px;
+    }
+    h5::after { /* 下線 */
+        width: 361px;
+        left: 0px;
+    }
 }
