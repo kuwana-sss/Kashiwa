@@ -203,7 +203,7 @@ h6 { /* 開催日時 */
     position: relative;
     width: 180px;
     height: 355px;
-    background-image: url(../images/map.png);
+    background-image: url(../images/spMap.png);
     background-size: cover;
     background-position: right;
     margin: 72px auto 112px;
@@ -371,6 +371,17 @@ li {
     background-color: #000;
 }
 
+.pageTop {
+    position: fixed;
+    right: 30px;
+    bottom: 50px;
+    z-index: 2;
+}
+.pageTop img {
+    width: 48px;
+    height: 48px;
+}
+
 /*footer部分のCSS*/
 footer{
     max-width: 768px;
@@ -387,8 +398,8 @@ footer ul li a{
 }
 
 .footerContainer{
-    border-left: 1px solid #FF0000;
-    border-right: 1px solid #FF0000;
+    /* border-left: 1px solid #FF0000;
+    border-right: 1px solid #FF0000; */
     margin:0 20px;
 }
 
@@ -460,28 +471,22 @@ footer ul li a{
         position: relative;
         background-image: url(../images/pcHero.png);
         max-width: 1366px;
+        width: 100%;
         height: 100vh;
     }
     .headerContainer {
         width: 100%;
-        border: 1px solid #FF0000;
+        /* border: 1px solid #FF0000; */
         border-bottom: none;
         margin: 0 83px;
     }
-    /* .hero {
-        background-image: url(../images/PChero.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-        width: 100%;
-        height: 100vh;
-    } */
 
     .mainLogo { /* Taiwanロゴ */
         position: absolute;
     }
     .mainLogo img {
-        width: 780px;
-        height: 314px;
+        width: 100%;
+        height: 100%;
         top: 50%;
         margin-left: 140px;
     }
@@ -492,12 +497,12 @@ footer ul li a{
         background-image: url(../images/pcBackimage1.png);
         padding: 0;
     }
-    .upperContainer {
+    .upperContainer { /* 上段枠線*/
         display: flex;
         padding-top: 80px;
         width: 100%;
-        border-left: 1px solid #FF0000;
-        border-right: 1px solid #FF0000;
+        /* border-left: 1px solid #FF0000;
+        border-right: 1px solid #FF0000; */
         margin:0 83px;
     }
     .lower {
@@ -511,9 +516,9 @@ footer ul li a{
         display: block;
         width: 104px;
         height: 78px;
-        margin: 0 200px 100px;
+        margin: 0 240px 100px 200px;
     }
-    .text {
+    .text { /* 国旗&テキスト*/
         display: block;
     }
     .topImg img{ /* 紹介画像 */
@@ -534,5 +539,211 @@ footer ul li a{
     h5::after { /* 下線 */
         width: 361px;
         left: 0px;
+    }
+    .mainText { /* 紹介文（複数個所） */
+        position: relative;
+        width: 420px;
+        height: 160px;
+        padding-top: 0px;
+        font-size: 20px;
+    }
+    .mainText::before { /* 上線 */
+        width: 420px;
+        top: -60px;
+        left: 0px;
+    }
+    .mainText::after { /* 下線 */
+        width: 420px;
+        bottom: -60px;
+        left: 0px;
+    }
+
+    .lower .mainText {
+        margin: 60px 104px 0;
+    }
+    h1 { /* 見出し(Gallery,Event,Travel) */
+        font-size: 48px;
+        padding: 24px;
+    }
+    .sub { /* 見出しの小文字部分 */
+        font-size: 24px;
+    }
+    .h1background { /* 見出しの背景画像 */
+        width: 530px;
+        height: 96px;
+        background-image: url(../images/pchBackImage.png);
+        background-size: contain;
+        margin: 0 auto 60px;
+    }
+    .gallery {
+        margin: 0 733px 160px 103px;
+    }
+    .travel {
+        margin: 0 103px 120px 733px;
+    }
+    .travelContent {
+        display: flex;
+    }
+    .travelSec .mainText {
+        margin: auto;
+    }
+    .under { /* マップ下の区切り線 */
+        padding-bottom: 60px;
+    }
+    .under::after { /* マップ下の区切り線 */
+        content: "";
+        display: block;
+        width: 223px;
+        height: 1px;
+        background-color: #000000;
+        position: absolute;
+        left: 76px;
+    }
+    .map {
+        width: 225px;
+        height: 508px;
+        background: url(../images/pcMap.png) no-repeat center/contain;
+        margin: 0 auto 183px;
+    }
+    .map img { /* リンク画像のサイズ*/
+        width: 99px;
+        height: 209px;
+    }
+    .taipei {
+        top: 61px;
+        left: 222px;
+    }
+    .taichu {
+        top: 90px;
+        right: 205px;
+    }
+    .tainan {
+        top: 402px;
+        left: 16px;
+    }
+    .under { /* マップ下の区切り線 */
+        margin: 0 auto;
+        padding-bottom: 80px;
+    }
+    .under::after { /* マップ下の区切り線 */
+        content: "";
+        display: block;
+        width: 480px;
+        height: 1px;
+        background-color: #000000;
+        position: absolute;
+        left: 443px;
+    }
+    .eventSec {
+        padding: 0 103px;
+    }
+    .event {
+        margin: 0 733px 160px 0;
+    }
+    h3 {
+        font-size: 36px;
+        text-align: left;
+        margin-bottom: 40px;
+    }
+    .eventInfo {
+        display: flex;
+        margin-bottom: 80px;
+    }
+    .eventSec img { /* イベント画像 */
+        width: 580px;
+        height: 396px;
+        margin: 0 auto 20px;
+    }
+    h4,h6 {
+        font-size: 20px;
+    }
+    h4 { /* "開催期間" */
+        margin-bottom: 32px;
+    }
+    h6 {
+        margin-bottom: 64px;
+    }
+    .eventSec .mainText {
+        width: 314px;
+        height: 192px;
+        margin: 0 auto;
+    }
+    .eventText {
+        padding-top: 31px;
+        margin: 0 auto;
+    }
+
+    .eventSec .mainText::before { /* 上線 */
+        width: 314px;
+        top: -32px;
+        left: 0px;
+    }
+    .eventSec .mainText::after { /* 下線 */
+        width: 314px;
+        bottom: -32px;
+        left: 0px;
+    }
+    .infoBoder {
+        width: 1040px;
+        height: 560px;
+        margin: 0 auto;
+    }
+    .information {
+        display: flex;
+        justify-content: space-around;
+        margin: auto;
+    }
+    .infoUpper {
+        width: 450px;
+        height: 320px;
+    }
+    .infoLower {
+        width: 450px;
+        height: 320px;
+    }
+    .infoSec h3 {
+        text-align: center;
+        margin-bottom: 80px;
+    }
+    .infoSec ul li { /* 基本情報内のリスト */
+        font-size: 20px;
+    }
+
+    .pageTop img { /* トップへ戻るボタンのサイズ */
+        width: 100px;
+        height: 100px;
+    }
+
+
+    /* footer */
+    footer{
+        max-width: 1366px;
+    }
+    .footerContainer{
+        margin:0 83px;
+        height: 100%;
+    }
+    .pcFooterContents{
+        display:flex;
+        justify-content:left;
+    }
+    .footerNav{
+        margin:0;
+        margin-left:20px;
+        margin-bottom:20px;
+        flex-basis: 33%;
+    }
+    .footerNav nav{
+        width: 100%;
+    }
+    .footerUnder{
+        flex-basis:66%;
+        display:flex;
+        justify-content: space-between;
+    }
+    .footerLogo{
+        width: 256px;
+        height:103px;
+        margin-right:0;
     }
 }
