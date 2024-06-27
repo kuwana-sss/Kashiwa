@@ -87,7 +87,7 @@ h1 {
     font-size: 12px;
 }
 
-.h1background { /* 見出しの背景画像 */
+.h1Background { /* 見出しの背景画像 */
     width: 220px;
     height: 40px;
     background-image: url(../images/hbackimage.png);
@@ -316,37 +316,6 @@ li {
     transform: translateX(-80%);
 }
 
-
-/* ↓ 左右のボタン（onlyPC）*/
-.next { /* "＞"ボタン（onlyPC）*/
-    position: absolute;
-    width: 15px;
-    height: 15px;
-    right: 10px;
-    bottom: 50%;
-    z-index: 10;
-    cursor: pointer;
-    border-top: solid 3px #FFFFFF;
-    border-right: solid 3px #FFFFFF;
-    -webkit-transform: rotate(45deg) translateY(50%);
-    transform: rotate(45deg) translateY(50%);
-    background-color: #8F8F8F;
-}
-.prev { /* "＜"ボタン（onlyPC）*/
-    position: absolute;
-    width: 15px;
-    height: 15px;
-    left: 25px;
-    bottom: 50%;
-    z-index: 10;
-    cursor: pointer;
-    border-top: solid 3px #FFFFFF;
-    border-right: solid 3px #FFFFFF;
-    -webkit-transform: rotate(-135deg) translateY(-50%);
-    transform: rotate(-135deg) translateY(-50%);
-    background-color: #8F8F8F;
-}
-
 /* ↓ インジケーター */
 .indicator {
     width: 100%;
@@ -481,10 +450,11 @@ footer ul li a{
         margin: 0 83px;
     }
 
-    .mainLogo { /* Taiwanロゴ */
+    /* .mainLogo { 
         position: absolute;
-    }
+    } */
     .mainLogo img {
+        /* position: absolute; */
         width: 100%;
         height: 100%;
         top: 50%;
@@ -568,7 +538,7 @@ footer ul li a{
     .sub { /* 見出しの小文字部分 */
         font-size: 24px;
     }
-    .h1background { /* 見出しの背景画像 */
+    .h1Background { /* 見出しの背景画像 */
         width: 530px;
         height: 96px;
         background-image: url(../images/pchBackImage.png);
@@ -686,7 +656,7 @@ footer ul li a{
     .infoBoder {
         width: 1040px;
         height: 560px;
-        margin: 0 auto;
+        margin: 0 auto 80px;
     }
     .information {
         display: flex;
@@ -713,6 +683,37 @@ footer ul li a{
         width: 100px;
         height: 100px;
     }
+
+    /* スライド部分 */
+    .gallerySec { /* 余白 */
+        padding-bottom: 80px;
+    }
+    .slide {
+        /* position: absolute; */
+        left: 50%;
+        width: 135%;
+        margin-bottom: 60px;
+    }
+    /* ↓ 左右のボタン（onlyPC）*/
+    .prev img {
+        position: absolute;
+        left: 30%;
+        bottom: 50%;
+        z-index: 100;
+        cursor: pointer;
+    }
+    .next img {
+        position: absolute;
+        right: 30%;
+        bottom: 50%;
+        z-index: 100;
+        cursor: pointer;
+    }
+    .indicatorWrapper img { /* ボタンのサイズ */
+        width: 64px;
+        height: 64px;
+    }
+
 
 
     /* footer */
