@@ -47,7 +47,7 @@ header{
     max-width: 768px;
     height: 667px;
     width: 100%;
-    background: url(../images/hero.png) no-repeat right center/cover;
+    background: url(../images/spHero.png) no-repeat right center/cover;
     position: relative;
     padding-top: 4px;
 }
@@ -90,7 +90,7 @@ h1 {
 .h1Background { /* 見出しの背景画像 */
     width: 220px;
     height: 40px;
-    background-image: url(../images/hbackimage.png);
+    background-image: url(../images/sph1BackImage.png);
     background-size: contain;
     margin: 0 auto 60px;
 }
@@ -174,7 +174,7 @@ h6 { /* 開催日時 */
 .upper { /* 紹介上段 */
     width: 375px;
     height: 407px;
-    background-image: url(../images/backimage1.png);
+    background-image: url(../images/spBackImage1.png);
     background-size: cover;
     padding-top: 20px;
 }
@@ -183,7 +183,7 @@ h6 { /* 開催日時 */
     padding-top: 32px;
     width: 375px;
     height: 399px;
-    background-image: url(../images/backimage2.png);
+    background-image: url(../images/spBackImage2.png);
     background-size: cover;
 }
 
@@ -450,21 +450,19 @@ footer ul li a{
         margin: 0 83px;
     }
 
-    /* .mainLogo { 
-        position: absolute;
-    } */
+    .mainLogo { 
+        text-align: center;
+    }
     .mainLogo img {
-        /* position: absolute; */
-        width: 100%;
-        height: 100%;
-        top: 50%;
-        margin-left: 140px;
+        width: 50%;
+        height: 50%;
+        left: 10px;
     }
     .upper {
         display: flex;
         width: 100%;
         height: 458px;
-        background-image: url(../images/pcBackimage1.png);
+        background-image: url(../images/pcBackImage1.png);
         padding: 0;
     }
     .upperContainer { /* 上段枠線*/
@@ -479,7 +477,7 @@ footer ul li a{
         display: flex;
         width: 100%;
         height: 458px;
-        background-image: url(../images/pcBackimage2.png);
+        background-image: url(../images/pcBackImage2.png);
         padding-top: 80px;
     }
     .topFlag img{
@@ -713,7 +711,6 @@ footer ul li a{
         width: 64px;
         height: 64px;
     }
-
 
 
     /* footer */
