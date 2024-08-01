@@ -11,8 +11,4 @@
     ?>
     <hr>
 
-</body>
-
-
-
 <?php require 'footer.php'; ?>

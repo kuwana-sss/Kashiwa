@@ -4,7 +4,7 @@ PCコンテンツ幅：1200px
 font: Noto Sans JP
 font-size: ベース16px 4の倍数
 見出しfont-size: SP→20px,PC→32px
-ＳＰ幅:375px 
+SP幅:375px 
 PC幅:1366px
 
 ※カラーコード
@@ -21,4 +21,135 @@ CCCCCC　青みのあるグレー
 BF0000　赤
 E6CCB2　薄い茶色
 F7D1CD　パステル系のピンク
- */
+*/
+
+body {
+    width: 375px;
+    font-family: Noto Sans JP;
+    font-size: 16px;
+}
+
+/* ヘッダーここから */
+header {
+    background-color: #EDE0D4;
+}
+
+.headerTop {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    padding-top: 15px;
+    padding-left: 12px;
+}
+
+.mainLogo img {
+    width: 62px;
+    height: 53px;
+}
+
+.shopButton {
+    display: flex;
+}
+.shopButton img { /* ログインカートアイコン文字込み*/
+    width: 40px;
+    height: 35px;
+}
+
+.drawerButton { /*暫定アイコン*/
+    width: 25px;
+    height: 25px;
+    background: url(../images/drawerIconSP.png);
+    border: none;
+}
+
+.globalNav { /*暫定非表示 */
+    display: none;
+}
+
+header input { /* 検索欄 */
+    position: relative;
+    left: 34px;
+    width: 318px;
+    height: 37px;
+    padding: 5px;
+    border: solid 1px #7F5539;
+}
+
+header form { /* 検索欄の余白 */
+    /* position: relative; */
+    padding-left: 12px;
+}
+
+.searchButton { /* 検索アイコン */
+    position: absolute;
+    left: 12px;
+    width: 34px;
+    background: #CCCCCC url(../images/searchIconSP.png) no-repeat center;
+    border: solid 1px #7F5539;
+}
+
+/* ヘッダーここまで */
+
+
+
+
+
+/* フッターここから */
+footer {
+    background-color: #EDE0D4;
+    color:#7F5539;
+    text-align: center;
+}
+footer ul li {
+    list-style: none;
+}
+footer ul li a {
+    text-decoration: none;
+}
+
+
+@media screen and (min-width:768px) { 
+    body {
+        width: 1366px;
+        font-size: 24px;
+    }
+
+    /* ヘッダーここから */
+    .mainLogo img {
+        width: 87px;
+        height: 78px;
+    }
+
+    .shopButton img {
+        width: 48px;
+        height: 54px;
+    }
+
+    .searchArea {
+        position: relative;
+        background-color: #B392AC;
+        width: 100%;
+        height: 64px;
+        padding: 12px 0;
+    }
+
+    header input { /* 検索欄 */
+        position: relative;
+        left: 951px;
+        width: 320px;
+        height: 40px;
+    }
+
+    .searchButton { /* 検索アイコン */
+        width: 40px;
+        height: 40px;
+        left: 925px;
+    }
+    /* ヘッダーここまで */
+
+
+
+
+
+    
+}
