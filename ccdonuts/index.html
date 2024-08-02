@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <div class="headerContainer">
+            <div class="headerTop">
+                <button class="drawerButton"></button>
+                <div class="drawerMenu">
+                    <nav class="globalNav">
+                        <ul>
+                            <li class="top"><a href="index.php">TOP</a></li>
+                            <li><a href="#">商品一覧</a></li>
+                            <li><a href="#">よくある質問</a></li>
+                            <li><a href="#">問い合わせ</a></li>
+                            <li><a href="#">当サイトのポリシー</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <p class="mainLogo"><img srcset="images/mainLogoSP.svg 400w, images/mainLogoPC.svg 1040w" alt=""></p>
+                <div class="shopButton">
+                    <div class="login">
+                        <i class="bi bi-box-arrow-in-right"></i>
+                        <p>ログイン</p>
+                        <!-- <i class="bi bi-box-arrow-in-left"><a href="#"></a></i> -->
+                        <!-- <p class="login"><a href="#"><img src="images/login.svg"></a></p> -->
+                    </div>
+                    <div class="cart">
+                        <i class="bi bi-cart3"><a href="#"></a></i>
+                        <p>カート</p>
+                        <!-- <p class="cart"><a href="#"><img srcset="images/cart.svg"></a></p> -->
+                    </div>
+                </div>
+            </div><!--headerTop-->
+            <div class="searchArea">
+                <form action="" method="post">
+                    <input type="text" name="product" placeholder="商品を検索">
+                    <input type="submit" class="searchButton" value="">
+                </form>
+            <div>
+        </div><!--headerContainer-->
+    </header>
+    <main>
+        <div class="loginInfo"></div><!--ログイン情報php "ようこそ、ゲスト様"-->
+        <div class="hero"></div><!--ヒーロー画像-->
+        <div class="mainContainer">
+            <div class="newProduct">
+                <p class="new">新商品</span>
+                <p class="newText">サマーシトラス</p>
+            </div>
+            <div class="donutsLife">
+                <p>ドーナツのある生活</p>
+            </div>
+        </div>
+        <div class="productBenner"><p>商品一覧</p></div> <!--商品一覧-->
+        <div class="shopImg">
+            <h1>Philosophy</h1>
+            <p>私たちの信念</p>
+
+            <h3>"Creating Connections"</h3>
+            <p>「ドーナツでつながる」</p>
+        </div>
+        <div class="ranking">
+            <h2>人気ランキング</h2>
+            <div class="wrapper">
+                <div>
+                    <p class="rank" style="background-color:#FFD233">1</p>
+                    <p><img srcset="images/ccDonutsSP.png 400w, images/ccDonutsPC.png 1040w"></p>
+                    <p class="donutsName">CCドーナツ 当店オリジナル（5個入り）</p>
+                    <p class="price">税込  ￥1,500</p>
+                    <button>カートに入れる</button>
+                </div>
+                <div>
+                    <p class="rank" style="background-color:#CCCCCC">2</p>
+                    <p><img srcset="images/fruitDonutsSet1SP.png 400w, images/fruitDonutsSet1PC.png 1040w"></p>
+                    <p class="donutsName">フルーツドーナツセット（12個入り）</p>
+                    <p class="price">税込  ￥3,500</p>
+                    <button>カートに入れる</button>
+                </div>
+                <div>
+                    <p class="rank" style="background-color:#D27C2C">3</p>
+                    <p><img srcset="images/fruitDonutsSet2SP.png 400w, images/fruitDonutsSet2PC.png 1040w"></p>
+                    <p class="donutsName">フルーツドーナツセット（14個入り）</p>
+                    <p class="price">税込  ￥4,000</p>
+                    <button>カートに入れる</button>
+                </div>
+                <div>
+                    <p class="rank" style="background-color:#E8C2CA">4</p>
+                    <p><img srcset="images/chocolateDonutsSP.png 400w, images/chocolateDonutsPC.png 1040w"></p>
+                    <p class="donutsName">チョコレートデライト（5個入り）</p>
+                    <p class="price">税込  ￥1,600</p>
+                    <button>カートに入れる</button>
+                </div>
+                <div>
+                    <p class="rank" style="background-color:#E8C2CA">5</p>
+                    <p><img srcset="images/bestSelectSP.png 400w, images/bestSelectPC.png 1040w"></p>
+                    <p class="donutsName">ベストセレクションボックス（4個入り）</p>
+                    <p class="price">税込  ￥1,200</p>
+                    <button>カートに入れる</button>
+                </div>
+                <div>
+                    <p class="rank" style="background-color:#E8C2CA">6</p>
+                    <p><img srcset="images/strawberryDonutsSP.png 400w, images/strawberryDonutsPC.png 1040w"></p>
+                    <p class="donutsName">ストロベリークラッシュ（5個入り）</p>
+                    <p class="price">税込  ￥1,800</p>
+                    <button>カートに入れる</button>
+                </div>
+            </div><!--Wrapper-->     
+        </div>
+    </main>
+    <footer>
+        <div class="footerContainer">
+            <div class="footerNav">
+                <nav>
+                    <ul>
+                        <li><a href="#">よくある質問</a></li>
+                        <li><a href="#">お問い合わせ</a></li>
+                        <li><a href="#">当サイトのポリシー</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footerSNS">
+                <nav class="snsNav">
+                    <ul>
+                        <li class="facebook"><a href="#"><img src="images/facebook.svg"></a></li>
+                        <li class="instagram"><a href="#"><img src="images/instagram.svg"></a></li>
+                        <li class="twitter"><a href="#"><img src="images/twetter.svg"></a></li>
+                    </ul>
+                </nav>
+            </div><!--footerSNS-->
+            <p class="footerLogo"><img srcset="images/mainLogoSP.svg 400w, images/mainLogoPC.svg 1040w" alt=""></p>
+            <p class="copyRight"><small>Copyright (C) 2023 c.c.donuts</small></p>
+        </div><!-- footerContainer -->
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="scripts/drawer.js"></script>
+</body>
+</html>
+
+  
