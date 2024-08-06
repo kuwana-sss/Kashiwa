@@ -1,0 +1,518 @@
+/* 共通基本ルール
+余白：4倍数
+PCコンテンツ幅：1200px
+font: Noto Sans JP
+font-size: ベース16px 4の倍数
+見出しfont-size: SP→20px,PC→32px
+SP幅:375px 
+PC幅:1366px
+
+※カラーコード
+FFD233　黄色
+7F5539　茶色
+EDE0D4　かなり薄いグレー
+D9D9D9　薄いグレー
+黒（000000）の透明度50％
+E8C2CA　パステル系の紫
+FF8877 ピンク
+B392AC　紫
+D27C2C　黄土色
+CCCCCC　青みのあるグレー
+BF0000　赤
+E6CCB2　薄い茶色
+F7D1CD　パステル系のピンク
+*/
+
+body {
+    width: 375px;
+    font-family: Noto Sans JP;
+    font-size: 16px;
+}
+
+/* ヘッダーここから */
+header {
+    background-color: #EDE0D4;
+}
+.headerTop {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    padding-top: 15px;
+    padding-left: 12px;
+}
+.mainLogo img {
+    width: 62px;
+    height: 53px;
+}
+.shopButton {
+    display: flex;
+    font-size: 25px;
+    color: #7F5539;
+    text-align: center;
+    margin: 0 5px;
+}
+.shopButton p {
+    font-size: 10px;
+    margin: 0 5px;
+}
+.login p {
+    padding-left: 5px;
+}
+.drawerButton { /*暫定アイコン*/
+    width: 25px;
+    height: 25px;
+    background: url(../images/drawerIconSP.png);
+    border: none;
+}
+
+.globalNav { /*ドロワー内メニュー 暫定非表示 */
+    display: none;
+}
+
+header input { /* 検索欄 */
+    position: relative;
+    left: 34px;
+    width: 318px;
+    height: 37px;
+    padding: 5px;
+    border: solid 1px #7F5539;
+    margin-bottom: 8px;
+}
+
+header form { /* 検索欄の余白 */
+    /* position: relative; */
+    padding-left: 12px;
+}
+
+.searchButton { /* 検索アイコン */
+    position: absolute;
+    left: 12px;
+    width: 34px;
+    background: #CCCCCC url(../images/searchIconSP.svg) no-repeat center;
+    border: solid 1px #7F5539;
+}
+
+/* ヘッダーここまで */
+/* ************** */
+
+.hero {
+    width: 100%;
+    height: 200px;
+    background: url(../images/heroSP.svg) no-repeat left/cover;
+    margin-bottom: 20px;
+}
+
+/* メインコンテンツ */
+.mainContainer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    width: 335px;
+    margin: 0 auto;
+}
+.newProduct {
+    width: 157px;
+    height: 157px;
+    background: url(../images/newProductSP.svg) no-repeat left/cover;
+    padding-top:4px;
+    color: #FFFFFF;
+}
+.new {
+    width: 40px;
+    height: 40px;
+    font-weight: bold;
+    background-color: #FF8877;
+    border-radius: 50%;
+    text-align: center;
+    padding: 12px 2px;
+}
+.newText {
+    padding: 80px 4px 4px 0;
+    text-align: right;
+}
+.donutsLife {
+    position: relative;
+    width: 157px;
+    height: 157px;
+    background: url(../images/donutsLifeSP.svg) no-repeat left/cover;
+}
+.donutsLife p {
+    position: absolute;
+    color: #FFFFFF;
+    top: 129px;
+    left: 25px;
+}
+.productBenner { /*商品一覧*/
+    position: relative;
+    width: 335px;
+    height: 83px;
+    background: url(../images/productBannerSP.svg) no-repeat left/cover;
+    margin: 20px auto;
+}
+.productBenner p {
+    position: absolute;
+    color: #7F5539;
+    top: 61px;
+    left: 264px;
+}
+
+/* 店舗紹介 */
+.shopImg {
+    padding-top: 100px;
+    text-align: center;
+    width: 100%;
+    height: 568px;
+    background: url(../images/shopImageSP.svg) no-repeat left/cover;
+    color: #FFFFFF;
+}
+.shopImg h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.shopImg h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+.shopImg p {
+    font-size: 16px;
+    margin-bottom: 60px;
+}
+
+
+/*ランキング*/
+h2 {
+    font-size: 20px;
+    border-bottom: solid 2px #FFD233;
+    width: 140px;
+    margin: 0 auto 90px auto;
+    padding-bottom : 12px;
+    text-align: center;
+}
+.ranking {
+    padding-top: 30px;
+}
+.rank {
+    width: 35px;
+    height: 35px;
+    margin: 0 auto 20px auto;
+    text-align: center;
+    color: #FFFFFF;
+    padding-top: 8px;
+}
+
+.donutsName {
+    color: #7F5539;
+    text-align: left;
+}
+.price {
+    color: #BF0000;
+    text-align: left;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    text-align: center;
+}
+.wrapper > div {
+    width: 157px;
+     
+}
+.wrapper img {
+    margin-bottom: 20px;
+}
+.wrapper button {
+    background-color: #7F5539;
+    color: #FFFFFF;
+    border: none;
+    margin-bottom: 80px;
+}
+
+/* 商品一覧ページここから */
+.productMenu {
+    padding-top: 32px;
+}
+.productMenu >h2 {
+    width: 80px;
+    margin-bottom: 40px;
+}
+h4 { /* "メインメニュー","バラエティセット" */
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 80px;
+    color: #7F5539;
+}
+/* 商品一覧ページここまで */
+
+    
+
+/* ************** */
+/* フッターここから */
+footer {
+    position: relative;
+    background-color: #EDE0D4;
+    color: #7F5539;
+    font-size: 12px;
+    padding-top: 16px;
+}
+footer ul {
+    padding-left: 12px;
+}
+footer ul li {
+    list-style: none;
+    margin: 0 0 24px 0;
+}
+footer ul li a {
+    text-decoration: none;
+}
+.footerNav ul li{
+    border-left: solid 2px #B392AC;
+    padding-left: 12px;
+    width: 125px;
+    margin-right: auto;
+}
+.snsNav ul {
+    display: flex;
+    padding: 0;
+}
+.snsNav ul li {
+    margin: 0 10px 92px 10px;
+}
+.footerSNS img {
+    width: 32px;
+    height: 32px;
+}
+.footerLogo img{
+    position: absolute;
+    width: 72px;
+    height: 64px;
+    top: 196px;
+    left: 291px;
+}
+.copyRight{
+    border-top: solid 1px #7F5539;
+    text-align: center;
+}
+
+@media screen and (min-width:768px) { 
+    body {
+        width: 1366px;
+        font-size: 24px;
+    }
+
+    /* ヘッダーここから */
+    .mainLogo img {
+        width: 87px;
+        height: 78px;
+    }
+
+    .shopButton {
+        padding-top: 15px;
+        font-size: 30px;
+        font-weight: bold;
+        margin: 0 px;
+    }
+    .shopButton div {
+        margin: 0 20px;
+    }
+    .shopButton p {
+        font-size: 12px;
+    }
+    .cart {
+        margin-right: 95px;
+    }
+
+    .searchArea {
+        position: relative;
+        background-color: #B392AC;
+        width: 100%;
+        height: 64px;
+        padding: 12px 0;
+    }
+    header input { /* 検索欄 */
+        position: relative;
+        left: 951px;
+        width: 320px;
+        height: 40px;
+    }
+    .searchButton { /* 検索アイコン */
+        width: 40px;
+        height: 40px;
+        left: 925px;
+    }
+    /* ヘッダーここまで */
+    /* ************** */
+
+    .hero {
+        width: 100%;
+        height: 593px;
+        background: url(../images/heroPC.svg) no-repeat left/cover;
+        margin-bottom: 80px;
+    }
+    /* メインコンテンツ */
+    .mainContainer {
+        font-size: 36px;
+        width: 1040px;
+    }
+    .newProduct {
+        width: 480px;
+        height: 480px;
+        background: url(../images/newProductPC.svg) no-repeat left/cover;
+        padding-top: 8px;
+    }
+    .new {
+        width: 140px;
+        height: 140px;
+        font-weight: normal;
+        font-size: 32px;
+        border-radius: 50%;
+        text-align: center;
+        padding: 50px 22px;
+    }
+    .newText {
+        padding: 265px 12px 12px 0;
+    }
+    .donutsLife {
+        width: 480px;
+        height: 480px;
+        background: url(../images/donutsLifePC.svg) no-repeat left/cover;
+    }
+    .donutsLife p {
+        top: 404px;
+        left: 78px;
+    }
+    .productBenner { /*商品一覧*/
+        width: 1040px;
+        height: 257px;
+        background: url(../images/productBannerPC.svg) no-repeat left/cover;
+        margin: 80px auto;
+    }
+    .productBenner p {
+        top: 197px;
+        left: 872px;
+        font-size: 36px;
+    }
+
+    /* 店舗紹介 */
+    .shopImg {
+        padding-top: 200px;
+        text-align: center;
+        width: 100%;
+        height: 667px;
+        background: url(../images/shopImagePC.svg) no-repeat left/cover;
+    }
+    .shopImg h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+    .shopImg h3 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    .shopImg p {
+        font-size: 20px;
+        margin-bottom: 40px;
+    }
+
+    /*ランキング*/
+    .ranking {
+        padding-top: 80px;
+        font-size: 24px;
+    }
+    h2 {
+        font-size: 32px;
+        width: 224px;
+        margin: 0 auto 120px auto;
+        padding-bottom : 20px;
+        text-align: center;
+    }
+
+    .rank {
+        width: 60px;
+        height: 60px;
+        margin: 0 auto 20px auto;
+        text-align: center;
+        padding-top: 15px;
+    }
+    .donutsName {
+        color: #7F5539;
+    }
+    .price {
+        color: #BF0000;
+    }
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-items: center;
+        text-align: center;
+    }
+    .wrapper > div {
+        width: 320px;
+    }
+    .wrapper img {
+        margin-bottom: 20px;
+    }
+    .wrapper button { /*カートに入れるボタン*/
+        width: 260px;
+        margin-bottom: 120px;
+    }
+
+    /* 商品一覧ページここから */
+    .productMenu {
+        padding-top: 32px;
+    }
+    .productMenu >h2 {
+        width: 128px;
+        margin-bottom: 160px;
+    }
+    h4 { /* "メインメニュー","バラエティセット" */
+        font-size: 24px;
+        margin-bottom: 120px;
+    }
+    /* 商品一覧ページここまで */
+
+    /* ************** */
+    /* フッターここから */
+    footer {
+        font-size: 16px;
+        padding-top: 20px;
+        height: 448px;
+    }
+    .footerNav ul {
+        display: flex;
+        justify-content: flex-start;
+        display: inline-block;
+        padding-left: 100px;
+    }
+    .footerNav ul li {
+        display: inline-block;
+        width: 170px;
+        height: 40px;
+        padding-top: 10px;
+    }
+    .snsNav ul {
+        margin: 262px auto 0 auto;
+        width: 182px;
+    }
+    .snsNav ul li {
+        margin: auto;
+    }
+    .footerSNS img {
+        width: 32px;
+        height: 32px;
+    }
+    .footerLogo img{
+        position: absolute;
+        width: 144px;
+        height: 128px;
+        top: 124px;
+        left: 611px;
+    }
+    .copyRight{
+        border-top: solid 1px #7F5539;
+        text-align: center;
+    }
+
+}
