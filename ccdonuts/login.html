@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title><?php echo htmlspecialchars($title); ?></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <div class="headerContainer">
+            <div class="headerTop">
+                <button class="drawerButton"></button>
+                <div class="drawerMenu">
+                    <nav class="globalNav">
+                        <ul>
+                            <li class="top"><a href="index.php">TOP</a></li>
+                            <li><a href="#">商品一覧</a></li>
+                            <li><a href="#">よくある質問</a></li>
+                            <li><a href="#">問い合わせ</a></li>
+                            <li><a href="#">当サイトのポリシー</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <p class="mainLogo"><img srcset="images/mainLogoSP.svg 400w, images/mainLogoPC.svg 1040w" alt=""></p>
+                <div class="shopButton">
+                    <div class="login">
+                        <i class="bi bi-box-arrow-in-right"></i>
+                        <p>ログイン</p>
+                        <!-- <i class="bi bi-box-arrow-in-left"><a href="#"></a></i> -->
+                        <!-- ログイン後はログアウトボタンに切り替わるように -->
+                    </div>
+                    <div class="cart">
+                        <i class="bi bi-cart3"><a href="#"></a></i>
+                        <p>カート</p>
+                    </div>
+                </div>
+            </div><!--headerTop-->
+            <div class="searchArea">
+                <form action="product.php" method="post">
+                    <input type="text" name="keyword" placeholder="商品を検索">
+                    <input type="submit" class="searchButton" value="">
+                </form>
+            <div>
+        </div><!--headerContainer-->
+    </header>
+
+<!-- <?php
+    $title= 'ログイン画面';
+    require 'header.php';
+?> -->
+
+    <main>
+        <div class="loginContainer">
+            <h2>ログイン</h2>
+            <div class="loginText">
+                <label>
+                    <p>メールアドレス</p>
+                    <input type="text" name="mail">
+                </label>
+                <label>
+                    <p>パスワード</p>
+                    <input type="text" name="password">
+                </label>
+                <button class="subButton">ログインする</button>
+            </div>
+            <div class="subNavi">
+                <a href="#">会員登録はこちら</a>
+            </div>
+        </div>
+    </main>
+
+
+<!-- <?php require 'footer.php'; ?> -->
+
+<footer>
+    <div class="footerContainer">
+        <div class="footerNav">
+            <nav>
+                <ul>
+                    <li><a href="#">よくある質問</a></li>
+                    <li><a href="#">お問い合わせ</a></li>
+                    <li><a href="#">当サイトのポリシー</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="footerSNS">
+            <nav class="snsNav">
+                <ul>
+                    <li class="facebook"><a href="#"><img src="images/facebook.svg"></a></li>
+                    <li class="instagram"><a href="#"><img src="images/instagram.svg"></a></li>
+                    <li class="twitter"><a href="#"><img src="images/twetter.svg"></a></li>
+                </ul>
+            </nav>
+        </div><!--footerSNS-->
+        <p class="footerLogo"><img srcset="images/mainLogoSP.svg 400w, images/mainLogoPC.svg 1040w" alt=""></p>
+        <p class="copyRight"><small>Copyright (C) 2023 c.c.donuts</small></p>
+    </div><!-- footerContainer -->
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="scripts/drawer.js"></script>
+</body>
+</html>
