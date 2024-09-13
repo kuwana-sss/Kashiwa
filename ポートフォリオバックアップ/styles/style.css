@@ -1,0 +1,469 @@
+header {
+  position: relative;
+  background: url(../images/headerImg.jpg) no-repeat right center/cover;
+  width: 740px;
+  height: 300px;
+}
+
+body {
+  background: #c3c5c78f;
+  width: 740px;
+}
+
+h1,h2 {
+  text-align: center;
+  font-family: "Sriracha";
+  font-size: 40px;
+  font-weight: 400;
+  font-style: normal;
+}
+h1 { /* "My portfolio" */
+  font-family: "Darumadrop One";
+  font-size: 90px;
+  color: #FFFFFF;
+  -webkit-text-stroke-width: 3px; /* 縁取り */
+  -webkit-text-stroke-color: black;
+}
+h2 {
+  margin-bottom: 20px;
+}
+.h2Sub {
+  font-size: 16px;
+  font-family: serif;
+}
+main p {
+  font-size: 20px;
+  line-height: 1.6;
+  letter-spacing: 0.05em;
+  margin-bottom: 10px;
+}
+
+.icon img { /* githubとメールアイコン*/
+  width: 25px;
+  height: 25px;
+}
+
+.skillContainer,.prodactContainer,.codeContainer,
+.aboutContainer,.contactContainer {
+  width: 80%;
+  margin: 60px auto;
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 20px;
+}
+.headerContainer {
+  padding-top: 50px;
+  letter-spacing: 0.5em;
+}
+
+/*ドロワーメニュー*/
+.navigation {
+  position: fixed;
+  top: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #FFFFFF 0, #53c6f0);
+  padding-top: 60px;
+  transition: all .5s ease; /* 展開に掛かる時間 */
+  transition-delay: .5s; /* 展開前の待機時間 */
+  z-index: -900; /* 他の要素より後ろに表示 */
+  background-repeat: no-repeat;
+  background-position: top left; /* 右上に配置 */
+}
+
+
+.navigation nav ul {
+  list-style: none;
+  text-align: center;
+}
+.navigation nav ul li {
+  margin-bottom: 10px;
+  margin: 25px auto;
+}
+.navigation nav ul li a {
+  text-decoration: none;
+  color: #000000;
+  font-family: "Yomogi";
+  font-size: 30px;
+  font-weight: bold;
+  border-bottom: 1px solid #000000;  
+}
+
+.isOpen {
+  right: 0px;
+  opacity: 1;
+  z-index: 900; /* 展開時に他の要素より手前に表示 */
+}
+
+.menu {
+  color: #000000;
+  font-family: "Yomogi";
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.top {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+/* ドロワーの波紋アニメーション */
+.drawer {
+  position: absolute;
+  right: 60px;
+  top: 50px;
+}
+
+.menuTrigger,
+.menuTrigger span { /* ドロワーボタン */
+  display: inline-block;
+  transition: all .4s;
+  box-sizing: border-box;
+  z-index: 1000;
+}
+.menuTrigger {
+  position: fixed;
+  width: 50px;
+  height: 44px;
+  top: 60px;
+  right: 50px;
+  background: none;
+  border: none;
+  appearance: none;
+  cursor: pointer;
+}
+.menuTrigger span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #00AEEF;
+  border-radius: 4px;
+}
+.menuTrigger span:nth-of-type(1) {
+  top: 0;
+}
+.menuTrigger span:nth-of-type(2) {
+  top: 20px;
+}
+.menuTrigger span:nth-of-type(3) {
+  bottom: 0;
+}
+
+/* 確認中 */
+#menuBtn span:nth-of-type(1) { 
+  animation: menuBtnBar01 .5s forwards;
+}
+@keyframes menuBtnBar01 {
+  0% {
+    transform: translateY(20px) rotate(-45deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+}
+#menuBtn span:nth-of-type(2) {
+  animation: menuBtnBar02 .5s forwards;
+}
+@keyframes menuBtnBar02 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#menuBtn span:nth-of-type(3) {
+  animation: menuBtnBar03 .5s forwards;
+}
+@keyframes menuBtnBar03 {
+  0% {
+    transform: translateY(-20px) rotate(45deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+}
+
+#menuBtn::after { /* 波紋 */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  content: '';
+  width: 30px;
+  height: 30px;
+  margin: -16px 0 0 -16px;
+  border-radius: 50%;
+  border: 1px solid #00AEEF; /* 波紋の色 */
+  transition: all .1s;
+  opacity: 0;
+}
+#menuBtn.active::after {
+  animation: circle .5s; /* 波紋のアニメーション */
+}
+@keyframes circle {
+  0% {
+    transform: scale(.1);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(3.5);
+    opacity: 0;
+  }
+}
+#menuBtn.active span:nth-of-type(1) { /* 上線の展開時のアニメーション */
+  animation: activeMenuBtnBar01 .5s .5s forwards;
+}
+@keyframes activeMenuBtnBar01 {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  100% {
+    transform: translateY(20px) rotate(-45deg);
+  }
+}
+#menuBtn.active span:nth-of-type(2) { /* 中線の展開時のアニメーション */
+  animation: activeMenuBtnBar02 .5s .5s forwards;
+}
+@keyframes activeMenuBtnBar02 {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+#menuBtn.active span:nth-of-type(3) { /* 下線の展開時のアニメーション */
+  animation: activeMenuBtnBar03 .5s .5s forwards;
+}
+@keyframes activeMenuBtnBar03 {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  100% {
+    transform: translateY(-20px) rotate(45deg);
+  }
+}
+/*ドロワーメニューここまで*/
+
+
+
+/* Prodact */
+.prodactContainer > div { /* 作品単位のレイアウト */
+  padding: 0.5em 1em;
+  margin: 1em 0;
+  background: #f4f4f4;
+  border-left: solid 6px #5bb7ae;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.33);
+  margin: 0 auto 40px auto;
+}
+.solo {
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #ED1A3D;
+  color: #ffffff;
+  border-radius: 5px;
+  padding: 5px;
+}
+.group {
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #008000;
+  color: #ffffff;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.prodactImage {
+  display: flex;
+  align-items: center;
+  justify-content:space-around;
+}
+.thumbnail { /*サムネ画像*/
+  text-align: center;
+}
+.thumbnail img {
+  width: auto;
+  height: 300px;
+}
+.rink {
+  font-weight: bold;
+}
+.prodactText .icon img{
+  width: 35px;
+  height: 35px;
+}
+
+/* Contact */
+
+.contactInput , textarea {
+  color: #000000;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight:500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border:2px solid #5bb7ae;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width:100%;
+  box-sizing: border-box;
+  outline:0;
+}
+
+.contactInput:focus, textarea:focus{
+  border:2px solid blue;
+}
+
+[type="submit"] {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  width: 100%;
+  background: #53c6f0;
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 24px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: all 0.3s;
+  margin-top: -4px;
+  font-weight: 700;
+}
+[type="submit"]:hover { background:#3baed8; }
+
+footer {
+  text-align: center;
+  background: #C69E6E;
+  font-size: 80%;
+}
+
+
+/* レスポンシブ対応 */
+@media screen and (min-width:768px) {
+  /* .onlyPC {
+    display: block;
+  }
+  .onlySP {
+    display: none;
+  } */
+  body {
+    width: 1366px;
+  }
+  header {
+    position: relative;
+    max-width: 1366px;
+    width: 100%;
+    height: 100vh;
+  }
+  .skillContainer,.prodactContainer,.codeContainer,
+  .aboutContainer,.contactContainer {
+    margin: 50px auto;
+  }
+    
+  /* 結合ドロワーメニュー */
+  .menuTrigger,.menu {
+    display: none;
+  }
+  header .navigation {
+    position: fixed;
+    top: 0;
+    opacity: 1;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 10%;
+    padding: 0;
+    background: #FFFFFF;
+  }
+  .globalNav ul {
+    display: flex;
+    position: absolute;
+    max-width: 100%;
+    justify-content: space-evenly;
+    color: #000000;
+    z-index: 2000;
+  }
+
+  .navigation nav ul li { /* 上の余白 */
+    margin: 20px auto;
+  }
+  .navigation nav ul li a {
+    display: inline-block;
+    position:relative;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    background:#5bb7ae;
+    color: #fff;
+    padding:0 2em;
+    transition:800ms ease all;
+    border: none;
+    margin: 0 10px; 
+  }
+  .navigation nav ul li a:hover{
+    background:#fff;
+    color: #5bb7ae;
+  }
+  .navigation nav ul li a:before,
+  .navigation nav ul li a:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2px;
+    width: 0;
+    background: #5bb7ae;
+    transition: 400ms ease all;
+  }
+  .navigation nav ul li a:after{
+    right: inherit;
+    top: inherit;
+    left: 0;
+    bottom: 0;
+  }
+  .navigation nav ul li a:hover:before,
+  .navigation nav ul li a:hover:after{
+    width: 100%;
+    transition: 800ms ease all;
+  }
+  /* 結合ドロワーメニューここまで */
+
+  h1 {
+    position: absolute;
+    font-size: 100px;
+    font-weight: 400;
+    letter-spacing: .2em;
+    left: 25%;
+    top: 30%;
+  }
+  h2 {
+    font-size: 55px;
+  }
+  .h2Sub {
+    font-size: 24px;
+  }
+  main p {
+    font-size: 30px;
+  }
+  addoress {
+    font-size: 30px;
+  }
+  .icon img {
+    width: 45px;
+    height: 45px;
+  }
+  .thumbnail img {
+    width: auto;
+    height: 400px;
+  }
+}
